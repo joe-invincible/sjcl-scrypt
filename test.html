@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>sjcl-scrypt tests</title>
+<script>
+var worker = new Worker("test-sjcl-scrypt.js");
+worker.addEventListener('message', function(e) {
+  document.getElementById('output').innerText = e.data;
+});
+worker.postMessage();
+</script>
+</head>
+<body>
+<h1>sjcl-scrypt tests</h1>
+
+<div id="output">Running tests...</div>
+
+</form>
+</body>
+</html>
